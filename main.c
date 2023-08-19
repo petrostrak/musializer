@@ -4,6 +4,8 @@
 
 int main(void) 
 {
-    printf("Hello, world!\n");
+    InitAudioDevice();
+    Sound sound = LoadSound("supersonic.ogg");
+    
     return 0;
 }

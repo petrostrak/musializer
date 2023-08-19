@@ -5,11 +5,21 @@
 
 int main(void) 
 {
+    InitWindow(800, 600, "Musializer");
+    SetTargetFPS(60);
+
     InitAudioDevice();
-    Sound sound = LoadSound("supersonic.ogg");
-    // Music music = LoadMusicStream("supersonic.ogg");
-    PlaySound(sound);
-    sleep(211);
+
+    Music music = LoadMusicStream("supersonic.ogg");
+    PlayMusicStream(music);
+
+    while (!WindowShouldClose()) {
+        UpdateMusicStream(music);
+        
+        BeginDrawing();
+        ClearBackground(RED);
+        EndDrawing();
+    }
     
     return 0;
 }

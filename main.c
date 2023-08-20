@@ -73,7 +73,7 @@ void callback(void *bufferData, unsigned int frames)
 
 int main(void) 
 {
-    pi = atan2f(1, 1)*4;
+    pi = atan2(1, 1)*4;
 
     InitWindow(800, 600, "Musializer");
     SetTargetFPS(60);

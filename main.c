@@ -71,16 +71,26 @@ void callback(void *bufferData, unsigned int frames)
     }
 }
 
-int main(void) 
-{
+int main(int argc, char* argv[]) 
+{    
+    char* filename;
+    if (argc > 1)
+    {
+        filename = argv[1];
+    } else
+    {
+        printf("Please provide with the path of the audio.\n");
+        return 1;
+    }
+    
+    
     pi = atan2(1, 1)*4;
-
     InitWindow(800, 600, "Musializer");
     SetTargetFPS(60);
 
     InitAudioDevice();
 
-    Music music = LoadMusicStream("supersonic.ogg");
+    Music music = LoadMusicStream(filename);
     SetMusicVolume(music, 0.2);
     PlayMusicStream(music);
 

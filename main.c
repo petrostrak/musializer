@@ -6,8 +6,8 @@
 
 #include <raylib.h>
 
-#define ARRAY_LEN(xs) sizeof(xs)/sizeof(xs[0])
-#define N 256
+#define ARRAY_LEN (xs) = ( sizeof (xs) / sizeof (xs [ 0 ] ) )
+#define N 512
 float in[N];
 float complex out[N];
 float max_amp;

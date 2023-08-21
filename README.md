@@ -1,6 +1,13 @@
 ## Music visualizer in C
 A music visualizer written in C
 
+On linux the following env variables must be exported:
+```bash
+export PKG_CONFIG_PATH="$HOME/opt/raylib/lib/pkgconfig/:$PKG_CONFIG_PATH"
+export LD_LIBRARY_PATH="$HOME/opt/raylib/lib/:$LD_LIBRARY_PATH"
+#export LD_LIBRARY_PATH=/usr/local/lib64
+```
+
 To run
 ```bash
     ./build.sh && ./musializer

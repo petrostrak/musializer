@@ -10,7 +10,7 @@ export LD_LIBRARY_PATH="$HOME/opt/raylib/lib/:$LD_LIBRARY_PATH"
 
 To run
 ```bash
-./build.sh && ./musializer
+./build.sh && ./musializer <path-to-audio>
 ```
 
 <img src="https://github.com/petrostrak/musializer/blob/main/musializer.png" width="250" height="250" />
